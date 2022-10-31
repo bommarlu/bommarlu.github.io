@@ -1,0 +1,233 @@
+:root {
+  --white: #fdfdfd;
+  --grey: #bdbdcbd0;
+  --dark-grey: #6f6f6f;
+  --black: #000000;
+  --blue: hsl(206, 96%, 62%);
+  --yellow: #fdff8f;
+  --teal: #7fffe7;
+  --ListMenuWidth: 12%;
+}
+
+
+h1 {
+  margin:0;
+  color: var(--blue);
+  padding:0%;
+}
+
+h2 {
+  margin:0;
+  color: var(--blue)
+}
+
+
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  caret-color: transparent;
+  border-style: none;
+}
+
+.Header {
+  background-color: var(--white);
+  border-width: 0 0 1px 0; /* top right bottom left */
+  border-style: inset inset inset inset;
+  border-color: var(--grey);
+  padding: 1px;
+  margin: 0;
+  font-size: 36;
+  text-align:center;
+  vertical-align:top;
+  color: var(--black);
+}
+
+.ContentPane {
+  background-color: var(--white);
+  border-style: none inset none inset;
+  border-color: var(--grey);
+  border-width: 1px 1px 1px 1px;
+
+  padding: 3%;
+  margin: 0;
+  font-size: 32;
+  vertical-align:top;
+  display: flex;
+  height: 100%;
+  width:100%;
+  flex-direction: column;
+}
+
+.ContentPaneBody {
+  background-color: var(--white);
+  border-style: none none none none;
+  color: var(--black);
+  align-self: center;
+  margin-top: 2em;
+  height: fit-content;
+  width: 80%;
+}
+
+.Content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.TextBox {
+  margin-left: 2em;
+  margin-right: 2em;
+  width: fit-content;
+  height: fit-content;
+}
+
+.SidebarContainer {
+  height: 100%;
+  width: auto;
+  max-width: fit-content;
+  min-width: 150px;
+  margin: 10px;
+  padding: 0;
+  background-color: var(--white);
+  border-width: 0 3px 3px 3px; /* top right bottom left */
+  border-style: none inset none none;
+  border-color: none var(--grey) var(--grey) var(--grey);
+  font-size: 24px;
+  vertical-align:top;
+  display: flex;
+  flex-direction: column;
+  font-variant:small-caps;
+}
+
+.SidebarButton {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+  font-style: bold;
+	cursor: pointer;
+	outline: inherit;
+
+  height: 30px;
+  width: 30px;
+  margin: 0;
+  align-items: center;
+  padding: 4px;
+  display: flex;
+}
+
+.SidebarHeader {
+  height: auto;
+  max-height: 30px;
+  border-width: 0 3px 3px 0; /* top right bottom left */
+  border-style: none 0 inset none;
+  border-color: black;
+  font-weight: bold;
+  width:auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Sidebar {
+  height: auto;
+  width: auto;
+  max-width: fit-content;
+  margin: 2px;
+  padding: 0;
+  color: var(--white);
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Sidebar:hover{
+  text-shadow: none;
+}
+
+.Sidebar .SidebarList {
+  padding:0;
+  margin: 5px;
+  margin-left: 7px;
+  width: auto;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.SidebarList#hidden{
+  visibility: hidden;
+  height: 0;
+}
+
+
+
+.SidebarList .ListItem {
+  height: auto;
+  min-height: 50px;
+  width: auto;
+  min-width: 200px;
+  list-style-type: none;
+
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+  color:var(--black);
+}
+
+.SidebarList .ListItem a {
+  width: auto;
+  height: 50px;
+  margin-left: 15px;
+  color:var(--black);
+  text-decoration: none;
+}
+
+.SidebarList .ListItem#active {
+  color: var(--blue);
+}
+
+.SidebarList .ListItem#active a {
+  color: var(--blue);
+}
+
+.SidebarList .ListItem:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 4px var(--teal);
+}
+
+/* 
+.SidebarList#title {
+  margin-left: 15px;
+  place-items: center;
+} */
+
+.sidebarClose {
+  animation: sidebarClose 1s forwards;
+}
+
+.sidebarOpen {
+  animation: sidebarOpen 1s forwards;
+}
+
+@keyframes sidebarClose {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: min-content;
+  }
+}
+@keyframes sidebarOpen {
+  0% {
+    height: min-content;
+  }
+  100% {
+    height: 100%;
+  }
+}
