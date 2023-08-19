@@ -17,6 +17,8 @@ gem "minima", "~> 2.5"
 
 #install yat theme: https://github.com/jeffreytse/jekyll-theme-yat
 gem "jekyll-theme-yat"
+#theme relies on sitemap
+gem 'jekyll-sitemap'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -40,3 +42,5 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
+
+gem "webrick", "~> 1.8"
